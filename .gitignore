@@ -8,3 +8,5 @@
 /example/.local-chromium/
 
 build/
+.idea
+.idea
