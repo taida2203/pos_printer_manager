@@ -26,6 +26,36 @@ class POSPrinter {
     this.type = 0,
     this.connectionType,
   });
+
+  factory POSPrinter.fromJson(Map<String, dynamic> json) {
+    return POSPrinter(
+      id: json['id'],
+      name: json['name'],
+      address: json['address'],
+      deviceId: json['deviceId'],
+      vendorId: json['vendorId'],
+      productId: json['productId'],
+      connected: json['connected'] ?? false,
+      type: json['type'] ?? 0,
+      connectionType: json['connectionType'] != null
+          ? ConnectionType.values[json['connectionType']]
+          : null,
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'address': address,
+      'deviceId': deviceId,
+      'vendorId': vendorId,
+      'productId': productId,
+      'connected': connected,
+      'type': type,
+      'connectionType': connectionType?.index,
+    };
+  }
 }
 
 extension on int {
