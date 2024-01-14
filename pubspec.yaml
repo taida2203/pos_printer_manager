@@ -15,8 +15,8 @@ dependencies:
   esc_pos_utils_plus:
     git:
       url: https://github.com/taida2203/esc_pos_utils_plus.git
-      ref: a936234
-  blue_thermal_printer: ^1.2.3          
+      ref: 846c4ef
+  blue_thermal_printer: ^1.2.3
   network_info_plus: ^4.0.2
   easy_logger: ^0.0.2
   printing: ^5.11.0
